@@ -427,7 +427,7 @@ func AddUserToGroup(groupId string, userId string) *bytes.Buffer {
   return respBody
 }
 
-func RemoveUserToGroup(groupId string, userId string) *bytes.Buffer {
+func RemoveUserToFromGroup(groupId string, userId string) *bytes.Buffer {
 
   body := &bytes.Buffer{}
   writer := multipart.NewWriter(body)
