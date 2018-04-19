@@ -10,6 +10,13 @@ import (
 	"strconv"
 )
 
+// Non-idomatic way to initialize the struct object (but a method favored by me to use in my projects)
+func (vi *VoiceIt2) Initialize() {
+	vi.APIKey = os.Getenv("VOICEITAPIKEY")
+	vi.APIToken = os.Getenv("VOICEITAPITOKEN")
+	vi.BaseURL = "https://api.voiceit.io"
+}
+
 // Alternative initialization method which returns the initialized object rather than operating on an instance of struct.
 func NewVoiceIt2(api_key, api_token string) VoiceIt2 {
 	return VoiceIt2{
